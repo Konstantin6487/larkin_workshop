@@ -9,6 +9,14 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
     output: {
       filename: 'bundle.js',
     },
+    module: {
+      rules: [
+        {
+          test: /\.jpe?g$/,
+          use: [{ loader: 'url-loader', options: { limit: 5000 } }]
+        },
+      ]
+    },
     plugins: [new HtmlWebpackPlugin(), new webpack.ProgressPlugin()]
   },
   modeConfig(mode),
