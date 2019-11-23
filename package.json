@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "dev": "npm run webpack -- --env.mode development --watch",
+    "dev": "npm run webpack-dev-server -- --env.mode development",
     "prod": "npm run webpack -- --env.mode production",
     "prod:debug": "npm run debug -- --env.mode production",
     "dev:debug": "npm run debug -- --env.mode development",
@@ -18,6 +19,8 @@
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }
